@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Sindows - AlimFoundation</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Montserrat", sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      width: 100%;
+      background: #111;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    .bitcount-grid-double-custom {
+      font-family: "Bitcount Grid Double", system-ui;
+      font-weight: 900;
+      font-variation-settings:
+        "slnt" 0,
+        "CRSV" 0.5,
+        "ELSH" 0,
+        "ELXP" 0;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 30px 60px 30px;
+    }
+
+    header h1 {
+      font-size: 7vw;
+      background: linear-gradient(120deg, #ff6ec4, #7873f5, #42e695);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      0% { filter: drop-shadow(0 0 10px #ff6ec4); }
+      50% { filter: drop-shadow(0 0 20px #7873f5); }
+      100% { filter: drop-shadow(0 0 30px #42e695); }
+    }
+
+    main {
+      padding: 30px;
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .product-card {
+      background: #1a1a1a;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      max-width: 800px;
+      text-align: center;
+    }
+
+    .product-card h2 {
+      font-family: "Bitcount Grid Double", system-ui;
+      font-weight: 700;
+      font-size: 3vw;
+      margin-bottom: 20px;
+      color: #42e695;
+    }
+
+    .product-card p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(135deg, #ff6ec4, #42e695);
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(66, 230, 149, 0.5);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="https://alimfoundation.github.io/">Home</a>
+    <a href="#">Products</a>
+  </nav>
+
+  <header>
+    <h1 class="bitcount-grid-double-custom">Sindows</h1>
+  </header>
+
+  <main>
+    <div class="product-card">
+      <h2>Добро пожаловать в Sindows</h2>
+      <p>
+        Здесь вы можете скачать продукт Sindows и начать использовать все его возможности прямо сейчас!
+      </p>
+      <a class="download-btn" href="https://drive.google.com/uc?export=download&id=11NLE2T2VCNxKs5LiP9TAQZE_IV1XqTth" download>
+        Download Now
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 AlimFoundation
+  </footer>
+
+</body>
+</html>
