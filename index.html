@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Dropdown Products Menu</title>
+  <title>AlimFoundation</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,16 +13,25 @@
     body {
       margin: 0;
       font-family: "Montserrat", sans-serif;
-      background: #f5f5f5;
+      background: #0d0d0d;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
     }
 
     nav {
+      width: 100%;
       background: #111;
       padding: 15px 30px;
       display: flex;
-      align-items: center;
+      justify-content: flex-start;
       gap: 30px;
-      position: relative;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
 
     nav a, .dropdown-btn {
@@ -71,20 +80,30 @@
       display: block;
     }
 
-    .bitcount-grid-double-custom {
+    /* Главный заголовок */
+    h1.bitcount-grid-double-custom {
       font-family: "Bitcount Grid Double", system-ui;
-      font-optical-sizing: auto;
-      font-weight: 700;
-      font-style: normal;
+      font-weight: 900;
       font-variation-settings:
         "slnt" 0,
         "CRSV" 0.5,
         "ELSH" 0,
         "ELXP" 0;
+      font-size: 8vw; /* огромный заголовок, адаптивный */
+      background: linear-gradient(120deg, #ff6ec4, #7873f5, #42e695);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-align: center;
+      margin: 0;
+      animation: glow 2s infinite alternate;
     }
 
-    section {
-      padding: 60px 30px;
+    @keyframes glow {
+      0% { filter: drop-shadow(0 0 10px #ff6ec4); }
+      50% { filter: drop-shadow(0 0 20px #7873f5); }
+      100% { filter: drop-shadow(0 0 30px #42e695); }
     }
   </style>
 </head>
@@ -106,12 +125,7 @@
     </div>
   </nav>
 
-  <section>
-    <h1 class="bitcount-grid-double-custom">
-      Добро пожаловать
-    </h1>
-    <p>Нажми Products → Sindows, чтобы перейти на страницу продукта.</p>
-  </section>
+  <h1 class="bitcount-grid-double-custom">AlimFoundation</h1>
 
   <script>
     function toggleDropdown() {
